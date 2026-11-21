@@ -277,15 +277,17 @@ def icon_cloud(c, x, y):
 
 def icon_bridge(c, x, y):
     """A bridge with a broken span: the Crimea bridge strike."""
-    c.rect(x + 8, y + 44, 48, 5, INK)
+    c.rect(x + 8, y + 44, 20, 5, INK)
+    c.rect(x + 36, y + 44, 20, 5, INK)
     c.rect(x + 12, y + 18, 4, 26, INK)
     c.rect(x + 48, y + 18, 4, 26, INK)
-    c.rect(x + 28, y + 26, 8, 18, RED)
-    c.line(x + 14, y + 18, x + 32, y + 26, INK, 3)
-    c.line(x + 50, y + 18, x + 32, y + 26, INK, 3)
-    c.circle(x + 32, y + 14, 6, RED)
-    c.line(x + 32, y + 4, x + 32, y + 10, RED, 3)
-    c.line(x + 24, y + 8, x + 40, y + 8, RED, 3)
+    c.line(x + 14, y + 18, x + 28, y + 40, INK, 3)
+    c.line(x + 50, y + 18, x + 36, y + 40, INK, 3)
+    cx, cy = x + 32, y + 34
+    c.circle(cx, cy, 6, RED)
+    for dx, dy in ((-10, -8), (0, -12), (10, -8), (-12, 0),
+                   (12, 0), (-10, 8), (0, 12), (10, 8)):
+        c.line(cx, cy, cx + dx, cy + dy, RED, 3)
 
 
 # ---------------------------------------------------------------- content

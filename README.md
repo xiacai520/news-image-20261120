@@ -15,7 +15,8 @@ breaking below $3,800, plus a ticker of the day's other stories.
 The program is pure Python 3 standard library: it draws the page
 with a built-in 5x7 bitmap font and writes the PNG itself (zlib +
 struct), so it runs offline and produces byte-identical output on
-every run. `entry.png` in this repository is its current output.
+every run. `entry.png` in this repository is its current output,
+verified deterministic across repeated runs.
 
 ## Run it
 
